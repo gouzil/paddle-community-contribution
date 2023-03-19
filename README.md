@@ -4,6 +4,8 @@
 
 本项目基于 https://gitee.com/openeuler/opendesign-datastat 修改
 
+考虑到使用全静态页面, 使用 `tools/get_data` 下的工具生成 json, vue3导入, github ci 定期运行
+
 vue3 模板库, 使用 vite 构建，并集成 Scss + Vue Router + Pinia + Axios
 
 ## 软件架构
