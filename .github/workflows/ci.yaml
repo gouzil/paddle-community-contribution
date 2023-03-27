@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install
+      - name: build web
+        run: pnpm build:paddlepaddle
+      - name: Get Date
+        id: date
+        run: echo "now=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT # ${{ steps.date.outputs.now }}
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: page
+          folder: ./dist/paddlepaddle
+          token:  ${{ secrets.GH_TOKEN }}
+          commit-message: update-time-${{ steps.date.outputs.now }}
