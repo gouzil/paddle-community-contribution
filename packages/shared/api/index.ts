@@ -1,18 +1,18 @@
 import { request } from '../plugins/axios';
 import type { AxiosResponse } from '../plugins/axios';
 import all from '../../../all.json';
-import pr_timeRange_all from '../../../contributeType_PR_timeRange_all.json'
-import pr_timeRange_lastonemonth from '../../../contributeType_PR_timeRange_lastonemonth.json'
-import pr_timeRange_lasthalfyear from '../../../contributeType_PR_timeRange_lasthalfyear.json'
-import pr_timeRange_lastoneyear from '../../../contributeType_PR_timeRange_lastoneyear.json'
-import issues_timeRange_lastonemonth from '../../../contributeType_issues_timeRange_lastonemonth.json'
-import issues_timeRange_lastoneyear from '../../../contributeType_issues_timeRange_lastoneyear.json'
-import issues_timeRange_lasthalfyear from '../../../contributeType_issues_timeRange_lasthalfyear.json'
-import issues_timeRange_all from '../../../contributeType_issues_timeRange_all.json'
-import comment_timeRange_lastonemonth from '../../../contributeType_comment_timeRange_lastonemonth.json'
-import comment_timeRange_lasthalfyear from '../../../contributeType_comment_timeRange_lasthalfyear.json'
-import comment_timeRange_lastoneyear from '../../../contributeType_comment_timeRange_lastoneyear.json'
-import comment_timeRange_all from '../../../contributeType_comment_timeRange_all.json'
+// import pr_timeRange_all from '../../../contributeType_PR_timeRange_all.json'
+// import pr_timeRange_lastonemonth from '../../../contributeType_PR_timeRange_lastonemonth.json'
+// import pr_timeRange_lasthalfyear from '../../../contributeType_PR_timeRange_lasthalfyear.json'
+// import pr_timeRange_lastoneyear from '../../../contributeType_PR_timeRange_lastoneyear.json'
+// import issues_timeRange_lastonemonth from '../../../contributeType_issues_timeRange_lastonemonth.json'
+// import issues_timeRange_lastoneyear from '../../../contributeType_issues_timeRange_lastoneyear.json'
+// import issues_timeRange_lasthalfyear from '../../../contributeType_issues_timeRange_lasthalfyear.json'
+// import issues_timeRange_all from '../../../contributeType_issues_timeRange_all.json'
+// import comment_timeRange_lastonemonth from '../../../contributeType_comment_timeRange_lastonemonth.json'
+// import comment_timeRange_lasthalfyear from '../../../contributeType_comment_timeRange_lasthalfyear.json'
+// import comment_timeRange_lastoneyear from '../../../contributeType_comment_timeRange_lastoneyear.json'
+// import comment_timeRange_all from '../../../contributeType_comment_timeRange_all.json'
 
 /**
  * 获取授权的相关回调链接
@@ -76,42 +76,42 @@ export function queryAll() {
  * 查询个人贡献
  *
  */
-export function queryUserContribute(params: any) {
-  if (params.contributeType == 'PR'){
-    switch (params.timeRange){
-      case 'lastonemonth':
-        return pr_timeRange_lastonemonth;
-      case 'lasthalfyear':
-        return pr_timeRange_lasthalfyear;
-      case 'lastoneyear':
-        return pr_timeRange_lastoneyear;
-      case 'all':
-        return pr_timeRange_all;
-    }
-  } else if(params.contributeType == 'Issue'){
-    switch (params.timeRange){
-      case 'lastonemonth':
-        return issues_timeRange_lastonemonth;
-      case 'lasthalfyear':
-        return issues_timeRange_lasthalfyear;
-      case 'lastoneyear':
-        return issues_timeRange_lastoneyear;
-      case 'all':
-        return issues_timeRange_all;
-    }
-  } else if(params.contributeType == 'Comment'){
-    switch (params.timeRange){
-      case 'lastonemonth':
-        return comment_timeRange_lastonemonth;
-      case 'lasthalfyear':
-        return comment_timeRange_lasthalfyear;
-      case 'lastoneyear':
-        return comment_timeRange_lastoneyear;
-      case 'all':
-        return comment_timeRange_all;
-    }
-  }
-}
+// export function queryUserContribute(params: any) {
+//   if (params.contributeType == 'PR'){
+//     switch (params.timeRange){
+//       case 'lastonemonth':
+//         return pr_timeRange_lastonemonth;
+//       case 'lasthalfyear':
+//         return pr_timeRange_lasthalfyear;
+//       case 'lastoneyear':
+//         return pr_timeRange_lastoneyear;
+//       case 'all':
+//         return pr_timeRange_all;
+//     }
+//   } else if(params.contributeType == 'Issue'){
+//     switch (params.timeRange){
+//       case 'lastonemonth':
+//         return issues_timeRange_lastonemonth;
+//       case 'lasthalfyear':
+//         return issues_timeRange_lasthalfyear;
+//       case 'lastoneyear':
+//         return issues_timeRange_lastoneyear;
+//       case 'all':
+//         return issues_timeRange_all;
+//     }
+//   } else if(params.contributeType == 'Comment'){
+//     switch (params.timeRange){
+//       case 'lastonemonth':
+//         return comment_timeRange_lastonemonth;
+//       case 'lasthalfyear':
+//         return comment_timeRange_lasthalfyear;
+//       case 'lastoneyear':
+//         return comment_timeRange_lastoneyear;
+//       case 'all':
+//         return comment_timeRange_all;
+//     }
+//   }
+// }
 
 /**
  * 查询社区贡献
