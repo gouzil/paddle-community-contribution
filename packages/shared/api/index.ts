@@ -76,7 +76,7 @@ export function queryAll() {
  * 查询个人贡献
  *
  */
-// export function queryUserContribute(params: any) {
+export function queryUserContribute(params: any) {
 //   if (params.contributeType == 'PR'){
 //     switch (params.timeRange){
 //       case 'lastonemonth':
@@ -111,7 +111,7 @@ export function queryAll() {
 //         return comment_timeRange_all;
 //     }
 //   }
-// }
+}
 
 /**
  * 查询社区贡献
